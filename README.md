@@ -2,6 +2,10 @@
 
 Designed a video player as part of a Design Engineering proposal to enhance Stenotype - a user-friendly note-taking platform inspired by the open-source Django project, Firepad. The aim is to make Stenotype even better, offering new features and an attractive UI. Stenotype, a device-based note-taking platform, is built on the Django project named Firepad, with the vision to replace traditional school notebooks with a modern, cutting-edge solution.
 
+Click the badge below to explore Firepad in action:
+
+[![Firepad](badges/firepad.svg?raw=true&sanitize=true)](https://firepad.io/)
+
 ![Screenshot](stenotype-storyboard-1.gif?raw=true)
 
 To watch it on a mobile device, change the screen orientation to landscape! 
