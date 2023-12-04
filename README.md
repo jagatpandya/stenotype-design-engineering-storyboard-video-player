@@ -1,4 +1,4 @@
-# Stenotype Design Engineering Storyboard Video Player
+# Stenotype Storyboard Video Player
 
 Stenotype is a device-based note-taking platform based on a Django project named Firepad that aimed to replace notebooks in school by offering new cutting-edge features and an attractive UI.
 
