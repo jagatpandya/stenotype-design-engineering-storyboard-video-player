@@ -15,6 +15,7 @@ const currentTime = document.querySelector('.current-time');
 const duration = document.querySelector('.duration');
 const fullScreen = document.querySelector('.full-screen');
 const exitFullScreen = document.querySelector('.exit-full-screen');
+// video control functions
 function playVideo() {
     video.play();
     play.hidden = true;
@@ -31,6 +32,7 @@ function backwardVideo() {
 function forwardVideo() {
     video.currentTime += 5;
 }
+// volume control Functions
 function showVolumeIcon() {
     volume.hidden = false;
     mute.hidden = true;
@@ -39,6 +41,7 @@ function showMuteIcon() {
     volume.hidden = true;
     mute.hidden = false;
 }
+// time display function
 function videoTime() {
     let currentMinutes = Math.floor(video.currentTime / 60);
     let currentSeconds = Math.floor(video.currentTime - currentMinutes * 60);
@@ -47,6 +50,7 @@ function videoTime() {
     currentTime.innerHTML = `${currentMinutes}:${currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds}`;
     duration.innerHTML = `${durationMinutes}:${durationSeconds < 10 ? `0${durationSeconds}` : durationSeconds}`;
 }
+// fullscreen functions
 function fullScreenMode() {
     if (document.body.webkitRequestFullscreen) {
         document.body.webkitRequestFullscreen();
@@ -148,6 +152,7 @@ fullScreen.addEventListener('click', fullScreenMode);
 exitFullScreen.addEventListener('click', exitFullScreenMode);
 // keyboard functionalities
 document.addEventListener('keydown', (event) => {
+    const key = event.key.toLowerCase(); // Convert the key to lowercase
     switch (event.key) {
         case ' ':
             // space key: play/pause
@@ -158,7 +163,7 @@ document.addEventListener('keydown', (event) => {
             }
             break;
         case 'm':
-            // letter 'M' key: mute/unmute
+            // letter 'm/M' key: mute/unmute
             if (volume.hidden == true) {
                 showVolumeIcon();
                 video.volume = 0.5;
@@ -170,7 +175,7 @@ document.addEventListener('keydown', (event) => {
             }
             break;
         case 'f':
-            // letter 'F' key: full-screen mode
+            // letter 'f/F' key: full-screen mode
             fullScreenMode();
             break;
         case 'Escape':
