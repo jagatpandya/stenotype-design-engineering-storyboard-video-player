@@ -16,5 +16,40 @@ To watch it on a mobile device, change the screen orientation to landscape!
 
 > **Note:** To view the code in the GitHub repository with proper formatting, make sure to change the tab size from the default **8** to **4**. You can adjust this setting in `GitHub > Settings > Appearance > Tab Size Preference`.
 
+The HTML hierarchy below represents a video player structure, encapsulated within a main element with the class wrapper, consisting of a div with the class player and various nested elements, including controls, buttons and a video element with associated classes and attributes for styling and functionality.
+```
+main.wrapper
+└── div.player
+    └── div.player-hover[data-fullscreen="false"]
+        ├── a.github-corner
+        │   └── svg
+        ├── div.container
+        │   ├── div.watermark-container
+        │   │   └── img
+        │   └── div.player-container
+        │       ├── div.video-progress
+        │       │   └── div.video-progress-bar
+        │       ├── div.player-controls
+        │       │   ├── div.player-buttons
+        │       │   │   ├── button.button.play
+        │       │   │   ├── button.button.pause[hidden]
+        │       │   │   ├── button.button.backward
+        │       │   │   ├── button.button.forward
+        │       │   │   ├── button.button.volume
+        │       │   │   ├── button.button.mute[hidden]
+        │       │   │   ├── div.volume-progress
+        │       │   │   │   └── div.volume-progress-bar
+        │       │   │   └── div.time-container
+        │       │   │       ├── p.current-time
+        │       │   │       ├── p.time-separator
+        │       │   │       └── p.duration
+        │       │   └── div.full-screen-container
+        │       │       ├── button.button.full-screen
+        │       │       └── button.button.exit-full-screen[hidden]
+        │       └── video.video[poster="src/images/thumbnail.png"]
+        │           └── source[src="src/videos/stenotype-storyboard.mp4" type="video/mp4"]
+        └── script[src="src/scripts/script.js"]
+```
+
 ## License
 Please refer to the [LICENSE](LICENSE) file for information on the license terms and any associated rights and limitations (MIT).
