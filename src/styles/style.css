@@ -76,6 +76,9 @@ img {
     background-color: transparent;
     background-size: cover;
 }
+.button:active {
+    transform: scale(0.9); 
+}
 .play {
     background-image: url('../images/buttons/play.png');
 }
