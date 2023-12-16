@@ -149,7 +149,7 @@ img {
     .button {
         width: 20px;
         height: 20px;
-        margin-right: 15px;
+        margin-right: 10px;
     }
     .volume-progress {
         height: 4px;
@@ -166,6 +166,10 @@ img {
     /* Tested on Samsung Galaxy Tab A SM-T355Y and Responsive Design Mode [Inspect Element (F12) tool] */
     .container {
         grid-template-rows: 1fr 60px;
+    }
+    .watermark-container {
+        width: 54px;
+        height: 54px;
     }
     .player-container {
         padding: 0 25px;
