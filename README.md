@@ -54,7 +54,7 @@ Explore the layout design of this video player, crafted with a combination of gr
 
 ![Screenshot](layout/layout.png?raw=true)
 
-To explore individual elements of the layout, navigate to the corresponding folder by clicking [here](layout/).
+To explore individual elements of the layout, navigate to the corresponding directory by clicking [here](layout/).
 
 ## License
 Please refer to the [LICENSE](LICENSE) file for information on the license terms and any associated rights and limitations (MIT).
