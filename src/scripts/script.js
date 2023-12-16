@@ -69,7 +69,7 @@ function exitFullScreenMode() {
         exitFullScreen.hidden = true;
     }
 }
-// show or hide controls
+// Show or hide controls
 let timeout = 0;
 playerHover.addEventListener('mousemove', () => {
     clearTimeout(timeout);
@@ -94,11 +94,11 @@ video.addEventListener('loadedmetadata', () => {
     volumeProgressBar.style.width = '50%';
 });
 video.addEventListener('timeupdate', () => {
-    // video current time and duration time
+    // Video current time and duration time
     videoTime();
-    // video progress bar
+    // Video progress bar
     const percentage = (video.currentTime / video.duration) * 100;
-    videoProgressBar.style.width = `${percentage}%`; // template literals
+    videoProgressBar.style.width = `${percentage}%`;
     if (video.currentTime === video.duration) {
         pause.hidden = true;
         play.hidden = false;
@@ -111,46 +111,48 @@ video.addEventListener('volumechange', () => {
         showMuteIcon();
     }
 });
-// play functionality
+// Play functionality
 play.addEventListener('click', playVideo);
-// pause functionality
+// Pause functionality
 pause.addEventListener('click', pauseVideo);
-// backward functionality
+// Backward functionality
 backward.addEventListener('click', () => {
     backwardVideo();
 });
-// forward functionality
+// Forward functionality
 forward.addEventListener('click', () => {
     forwardVideo();
 });
 volumeProgress.addEventListener('click', (event) => {
-    // volume progress bar
+    // Volume progress bar
     const progressVolume = (event.offsetX / volumeProgress.offsetWidth) * 1;
     const percentage = progressVolume * 100;
-    volumeProgressBar.style.width = `${percentage}%`; // template literals
+    volumeProgressBar.style.width = `${percentage}%`;
     video.volume = progressVolume;
 });
-// mute functionality
+// Mute functionality
 volume.addEventListener('click', () => {
     showVolumeIcon();
     video.volume = 0;
     volumeProgressBar.style.width = '0';
 });
-// unmute functionality
+// Unmute functionality
 mute.addEventListener('click', () => {
     showMuteIcon();
     video.volume = 0.5;
     volumeProgressBar.style.width = '50%';
 });
-// full-Screen mode functionality
+// Full-Screen mode functionality
 fullScreen.addEventListener('click', fullScreenMode);
-// exit full-screen mode functionality
+// Exit full-screen mode functionality
 exitFullScreen.addEventListener('click', exitFullScreenMode);
-// keyboard functionalities
+// Keyboard functionalities
 document.addEventListener('keydown', (event) => {
-    switch (event.key) {
+    const key = event.key.toLowerCase();
+
+    switch (key) {
         case ' ':
-            // space key: play/pause
+            // Space key: play/pause
             if (video.paused) {
                 playVideo();
             } else {
@@ -158,7 +160,7 @@ document.addEventListener('keydown', (event) => {
             }
             break;
         case 'm':
-            // letter 'M' key: mute/unmute
+            // Letter 'M/m' key: mute/unmute
             if (volume.hidden == true) {
                 showVolumeIcon();
                 video.volume = 0.5;
@@ -170,11 +172,11 @@ document.addEventListener('keydown', (event) => {
             }
             break;
         case 'f':
-            // letter 'F' key: full-screen mode
+            // Letter 'F/f' key: full-screen mode
             fullScreenMode();
             break;
         case 'Escape':
-            // escape key: exit full-screen mode
+            // Escape key: exit full-screen mode
             exitFullScreenMode();
             break;
     }
