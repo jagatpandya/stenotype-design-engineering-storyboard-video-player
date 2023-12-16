@@ -54,7 +54,7 @@ Take a look at the layout design of this video player. It's created using a mix 
 
 ![Screenshot](layout/layout.png?raw=true)
 
-To view specific layouts, navigate to the corresponding folder by clicking [here](.layout/).
+To view specific layouts, navigate to the corresponding folder by clicking [here](layout/).
 
 ## License
 Please refer to the [LICENSE](LICENSE) file for information on the license terms and any associated rights and limitations (MIT).
