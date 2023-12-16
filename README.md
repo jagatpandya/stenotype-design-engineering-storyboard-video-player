@@ -51,5 +51,7 @@ main.wrapper
         └── script[src="src/scripts/script.js"]
 ```
 
+![Screenshot](layout/layout.png?raw=true)
+
 ## License
 Please refer to the [LICENSE](LICENSE) file for information on the license terms and any associated rights and limitations (MIT).
