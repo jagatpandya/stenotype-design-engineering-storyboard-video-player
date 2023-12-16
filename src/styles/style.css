@@ -144,7 +144,6 @@ img {
         height: 54px;
     }
     .video-progress {
-        width: 60px;
         height: 4px;
     }
     .button {
@@ -153,6 +152,7 @@ img {
         margin-right: 15px;
     }
     .volume-progress {
+        width: 60px;
         height: 4px;
     }
     .time-container {
