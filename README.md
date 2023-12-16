@@ -50,6 +50,7 @@ main.wrapper
         │           └── source[src="src/videos/stenotype-storyboard.mp4" type="video/mp4"]
         └── script[src="src/scripts/script.js"]
 ```
+Take a look at the layout design of this video player. It's created using a mix of a grid and flex boxes, as shown in the screenshot below:
 
 ![Screenshot](layout/layout.png?raw=true)
 
