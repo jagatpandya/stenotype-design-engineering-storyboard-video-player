@@ -144,18 +144,19 @@ img {
         height: 54px;
     }
     .video-progress {
+        width: 60px;
         height: 4px;
     }
     .button {
         width: 20px;
         height: 20px;
-        margin-right: 10px;
+        margin-right: 15px;
     }
     .volume-progress {
         height: 4px;
     }
     .time-container {
-        margin: 0 10px;
+        margin: 0 15px;
     }
     .full-screen, .exit-full-screen {
         margin-right: 0;
