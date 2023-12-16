@@ -16,7 +16,7 @@ To watch it on a mobile device, change the screen orientation to landscape!
 
 > **Note:** To view the code in the GitHub repository with proper formatting, make sure to change the tab size from the default **8** to **4**. You can adjust this setting in `GitHub > Settings > Appearance > Tab Size Preference`.
 
-The HTML hierarchy below represents a video player structure, encapsulated within a main element with the class wrapper, consisting of a div with the class player and various nested elements, including controls, buttons and a video element with associated classes and attributes for styling and functionality.
+The following HTML hierarchy illustrates the structure of a video player. It is enclosed within a main element with the class wrapper, containing a div element with the class player and a series of nested elements. These include controls, buttons, and a video element, each with specific classes and attributes designed for styling and functionality.
 ```
 main.wrapper
 └── div.player
@@ -25,7 +25,7 @@ main.wrapper
         │   └── svg
         ├── div.container
         │   ├── div.watermark-container
-        │   │   └── img
+        │   │   └── img[src="src/images/watermark.png"]
         │   └── div.player-container
         │       ├── div.video-progress
         │       │   └── div.video-progress-bar
@@ -35,8 +35,8 @@ main.wrapper
         │       │   │   ├── button.button.pause[hidden]
         │       │   │   ├── button.button.backward
         │       │   │   ├── button.button.forward
-        │       │   │   ├── button.button.volume
-        │       │   │   ├── button.button.mute[hidden]
+        │       │   │   ├── button.button.mute
+        │       │   │   ├── button.button.unmute[hidden]
         │       │   │   ├── div.volume-progress
         │       │   │   │   └── div.volume-progress-bar
         │       │   │   └── div.time-container
@@ -50,11 +50,11 @@ main.wrapper
         │           └── source[src="src/videos/stenotype-storyboard.mp4" type="video/mp4"]
         └── script[src="src/scripts/script.js"]
 ```
-Take a look at the layout design of this video player. It's created using a mix of a grid and flex boxes, as shown in the screenshot below:
+Explore the layout design of this video player, crafted with a combination of grid and flex boxes. The structure is illustrated in the screenshot below:
 
 ![Screenshot](layout/layout.png?raw=true)
 
-To view specific layouts, navigate to the corresponding folder by clicking [here](layout/).
+To explore individual elements of the layout, navigate to the corresponding folder by clicking [here](layout/).
 
 ## License
 Please refer to the [LICENSE](LICENSE) file for information on the license terms and any associated rights and limitations (MIT).
